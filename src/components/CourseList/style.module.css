@@ -1,0 +1,98 @@
+.courselist {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+.post {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  /* justify-content: space-between; */
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.256);
+}
+
+.post__text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 80px;
+  transition: all ease-in-out 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.post__date {
+  position: relative;
+  width: 60px;
+  font-size: 11px;
+  text-transform: capitalize;
+  color: orange;
+  font-weight: 500;
+  justify-content: center;
+  transition: all ease-in-out 0.2s;
+}
+
+.post:hover .post__date  {
+ opacity: 0.6;
+}
+
+.post__img {
+  height: 80px;
+  width: 80px;
+  
+}
+
+.post__title {
+text-align: left;
+font-size: 18px;
+color: white;
+font-weight: 500;
+
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.post__subtitle {
+font-size: 12px;
+opacity: 0.5;
+font-weight: 100;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.post:hover .post__text  {
+ opacity: 0.6;
+}
+
+
+.post__read {
+  position: relative;
+  width: 60px;
+  font-size: 11px;
+  text-transform: capitalize;
+  color: orange;
+  font-weight: 500;
+  justify-content: center;
+  transition: all ease-in-out 0.2s;
+}
+
+.post:hover .post__read {
+width: 95px;
+}
+
+.post .post__read::after {
+content: " >";
+transition: all ease-in-out 0.2s;
+opacity: 0;
+}
+
+.post:hover .post__read::after {
+opacity: 1;
+}

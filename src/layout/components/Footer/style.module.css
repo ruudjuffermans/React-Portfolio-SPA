@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  padding: 50px 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.5;
+  gap: 50px;
+}
+
+.header__menu {
+  display: none;
+}
+
+.header__name {
+  font-weight: 600;
+  font-size: 22px;
+
+}
+
+.header__nav {
+  display: flex;
+  gap: 25px;
+}
+
+.header__link {
+  opacity: 0.4;
+}
+
+.header__link:hover:not(.active) {
+  opacity: 0.6;
+}
+
+
+.active {
+  opacity: 1;
+}
+

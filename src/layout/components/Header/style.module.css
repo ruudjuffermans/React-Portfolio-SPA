@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  padding: 40px 0;
+  align-items: baseline;
+  gap: 40px;
+}
+
+.header__btn {
+  width: 20px;
+  height: 20px;
+  display: block;
+  transform: translateY(5px);
+  fill: white;
+
+}
+
+.header__name {
+  font-weight: 600;
+  font-size: 22px;
+
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.header__menu {
+  display: none;
+  margin-left: auto;
+}
+
+@media only screen and (max-width: 900px) {
+.header__nav {
+  display: none;
+}
+
+.header__menu {
+  display: block;
+}
+}
+
+
+.header__link {
+  opacity: 0.4;
+}
+
+.header__link:hover:not(.active) {
+  opacity: 0.6;
+}
+
+
+.active {
+  opacity: 1;
+}
+
