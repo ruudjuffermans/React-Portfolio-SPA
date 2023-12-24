@@ -1,0 +1,27 @@
+.box {
+position: fixed;
+width: 100%;
+left: 0;
+bottom: 60px;
+}
+
+.row {
+
+  max-width: var(--maxwidth);
+  padding-left: 20px;
+  padding-right: 20px;
+  position: absolute;
+  right: 0;
+  /* margin: auto; */
+}
+
+.arrow {
+  transform: rotate(-90deg);
+  float: right;
+  height: 40px;
+  width: 40px;
+}
+
+.arrow svg {
+fill: white;
+}

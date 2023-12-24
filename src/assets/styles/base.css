@@ -27,8 +27,9 @@ p {
 
 
 ol, ul {
-list-style-position: inside;
-padding-left: 20px;
+  list-style-position: inside;
+  padding-left: 20px;
+  margin: 10px 0;
 }
 
 a {
