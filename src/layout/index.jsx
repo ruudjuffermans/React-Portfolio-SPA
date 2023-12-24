@@ -64,14 +64,14 @@ const Layout = () => {
         </div>
         <Footer />
         <div style={{ display: visibility }} className={styles.box}>
-          <div className={styles.row}>
 
-            <button
-              className={styles.arrow}
-              onClick={() => setPosition({ top: 0, left: 0 })}
 
-            ><img src={arrow} alt="" /></button>
-          </div>
+          <button
+            className={styles.arrow}
+            onClick={() => setPosition({ top: 0, left: 0 })}
+
+          ><img src={arrow} alt="" /></button>
+
         </div>
       </Main>
     </Container>

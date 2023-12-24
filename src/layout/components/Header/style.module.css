@@ -44,15 +44,15 @@
 
 
 .header__link {
-  opacity: 0.4;
+  color: var(--text-grey);
 }
 
 .header__link:hover:not(.active) {
-  opacity: 0.6;
+  color: var(--text);
 }
 
 
 .active {
-  opacity: 1;
+  color: var(--primary);
 }
 

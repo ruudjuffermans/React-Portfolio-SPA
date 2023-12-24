@@ -1,7 +1,9 @@
 :root {
   --background: #282c35;
   --text: #e2e2e2;
-  --header: 64px;
+  --menu: #e96d00;
+  --text-grey: grey;
+  --color-primary: orange;
   --gutter: 20px;
   --maxwidth: 1200px;
 }
