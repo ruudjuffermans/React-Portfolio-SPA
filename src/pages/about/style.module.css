@@ -1,0 +1,15 @@
+.image {
+    float: right;
+    padding-left: 10px;
+    max-width: 220px;
+    margin: auto;
+}
+@media only screen and (max-width: 900px) {
+.image {
+  float: none;
+}
+
+.header__menu {
+  display: block;
+}
+}

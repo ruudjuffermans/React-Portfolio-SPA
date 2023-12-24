@@ -1,0 +1,28 @@
+.btn {
+    align-items: center;
+    background-color: transparent;
+    margin-right: 5px;
+    margin-left: 5px;
+    border: 1px solid #3b3e46;
+    color: var(--text);
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 600;
+    height: 36px;
+    justify-content: center;
+    letter-spacing: .5px;
+    outline: none;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+.btn__primary {
+    color: orange;
+}
+
+.btn:hover {
+  border: 1px solid #606161;
+} 
+
