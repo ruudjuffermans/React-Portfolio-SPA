@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <Content>
       <PageTitle >
-        <p style={{ fontSize: "16px", maxWidth: " 400px", margin: "auto" }}>
-          Thoughts, stories and ideas about monitoring, organisations and people
+        <p style={{ fontSize: "18px", maxWidth: " 380px", margin: "auto", opacity: "0.5" }}>
+          My Collection of Blog Posts and Courses on Blockchain, Full-Stack Development, and More...
         </p>
       </PageTitle>
       <Section>

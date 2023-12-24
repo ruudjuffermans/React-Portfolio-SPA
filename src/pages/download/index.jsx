@@ -12,7 +12,7 @@ const Download = () => {
         </p>
         <ul>
           <li>
-            <Link to={"https://github.com/ruudjuffermans/Hyperledger-Fabric-2.x-Blockchain-Network-Smart-Contracts"}>https://github.com/ruudjuffermans/Hyperledger-Fabric-2.x-Blockchain-Network-Smart-Contracts</Link>
+            <Link style={{ textDecoration: "underline", fontSize: "12px", color: "orange" }} to={"https://github.com/ruudjuffermans/Hyperledger-Fabric-2.x-Blockchain-Network-Smart-Contracts"}>github.com/ruudjuffermans/Hyperledger-Fabric</Link>
           </li>
         </ul>
 

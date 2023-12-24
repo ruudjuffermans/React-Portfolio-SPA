@@ -1,11 +1,3 @@
-:root .container {
-  --card-p: 20px;
-  --card-bg: var(--color-bg-top);
-  --card-border-r: 16px;
-  --card-border: none;
-  --card-shadow: var(--shadow-1);
-}
-
 .container {
   position: relative;
   width: 100%;

@@ -9,15 +9,15 @@
 .drawer {
   color: white;
   fill: white;
-  background: rgb(208, 111, 1);
+  background: orangered;
   height: 100vh;
-  width: 400px;
-  max-width: calc(100% - 80px);
+  width: 100%;
+  max-width: calc(100% - 50px);
   padding-left: 64px;
   padding-top: 40px;
   margin-left: auto;
   transform: translateX(100%);
-  transition: all var(--transition);
+  transition: all ease-in-out 0.3s;
   opacity: 1;
   position: absolute;
   right: 0;
@@ -43,17 +43,26 @@
 
 .menu__list {
   padding-top: 40px;
+  list-style: none;
+  margin: auto;
 }
 
 .menu__item {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   font-size: 24px;
   /* color: white; */
   text-transform: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .drawer__link::before {
   /* background-color: white; */
   height: 3px !important;
+}
+
+.drawer__btn {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: var(--text);
 }

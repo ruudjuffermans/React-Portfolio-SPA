@@ -9,20 +9,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: poppins;
+  font-family: quicksand;
 }
 
 body {
   font-weight: 400;
   font-size: 16px;
-  color: rgba(255, 255, 255);
+  color: var(--text);
   line-height: 2;
-  background-color: rgb(38, 41, 41);
+  background-color: var(--background);
 }
 
 p {
-  margin: 20px 0;
-  opacity: 0.8;
+  margin: 10px 0;
   font-weight: 300;
 }
 

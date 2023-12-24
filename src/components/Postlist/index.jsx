@@ -124,21 +124,16 @@ const postList = [
 
 const Postlist = () => {
     return (
-
-        <ul className={styles.postlist}>
+        <div className={styles.postlist}>
             {postList.map(({ title, date, read, id }, i) => (
-                <li key={i}>
-                    <Link className={styles.post}
-                        to={`/post/${id}`}>
-
-                        <div className={styles.post__date}>{date}</div>
-                        <div className={styles.post__title}>{title}</div>
-                        <div className={styles.post__read}>{read} min read</div>
-
-                    </Link>
-                </li>
+                <Link key={i} className={styles.post}
+                    to={`/post/${id}`}>
+                    <div className={styles.post__date}>{date}</div>
+                    <div className={styles.post__title}>{title}</div>
+                    <div className={styles.post__read}>{read} min read</div>
+                </Link>
             ))}
-        </ul>
+        </div>
     )
 }
 

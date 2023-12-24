@@ -2,26 +2,28 @@
   list-style: none;
   padding: 0;
 
+
 }
 
 
 
 .post {
-  display: flex;
-  gap: 20px;
-  padding: 10px 0;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.256);
+  display: grid;
+  grid-template-columns: 50px auto 95px;
+  place-items: center;
+  grid-row-gap: 40px;
+  border-bottom: none;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  padding-bottom: 10px;
 }
 
 
 
 
 .post__date {
-  position: relative;
-  width: 80px;
-  font-size: 11px;
+  width: 50px;
+  font-size: 12px;
   text-transform: capitalize;
   color: orange;
   font-weight: 500;
@@ -35,7 +37,7 @@
 
 .post__title {
 text-align: left;
-flex: 1;
+width: 100%;
 color: white;
 font-weight: 300;
 transition: all ease-in-out 0.2s;
@@ -51,19 +53,19 @@ text-overflow: ellipsis;
 
 .post__read {
   color: white;
-font-size: 13px;
-opacity: 0.2;
-width: 90px;
+font-size: 14px;
+opacity: 0.5;
+width: 80px;
 text-align: left;
 transition: all ease-in-out 0.2s;
 }
 
 .post:hover .post__read {
-width: 95px;
+width: 90px;
 }
 
 .post .post__read::after {
-content: " >";
+content: ">";
 transition: all ease-in-out 0.2s;
 opacity: 0;
 }

@@ -14,10 +14,10 @@ const Contact = () => {
         <p>
           <ul>
             <li>
-              Email: ruudjuf@gmail.com
+              Email: <span style={{ color: "orange" }}>ruudjuf@gmail.com</span>
             </li>
             <li>
-              Telephone: +31 (0)6 435 950 90
+              Telephone: <span style={{ color: "orange" }}>+31 (0)6 435 950 90</span>
             </li>
           </ul>
         </p>
@@ -28,17 +28,17 @@ const Contact = () => {
         <p>
           <ul>
             <li>
-              <Link to={"https://www.instagram.com/rudy_j3/"}>
+              <Link style={{ color: "orange" }} to={"https://www.instagram.com/rudy_j3/"}>
                 Instagram
               </Link>
             </li>
             <li>
-              <Link to={"https://www.linkedin.com/in/r-j3/"}>
+              <Link style={{ color: "orange" }} to={"https://www.linkedin.com/in/r-j3/"}>
                 Linkedin
               </Link>
             </li>
             <li>
-              <Link to={"https://github.com/ruudjuffermans"}>
+              <Link style={{ color: "orange" }} to={"https://github.com/ruudjuffermans"}>
                 Github
               </Link>
             </li>

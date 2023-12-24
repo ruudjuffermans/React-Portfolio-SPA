@@ -7,7 +7,7 @@ const data = [
   { name: "Home", to: "/" },
   { name: "About me", to: "/about-me" },
   { name: "Contact", to: "/contact" },
-  { name: "Hire me", to: "/hire-me" },
+  { name: "Resume", to: "/resume" },
   { name: "Downloads", to: "/download" },
   { name: "Courses", to: "/courses" },
 ];
@@ -17,7 +17,7 @@ const Menu = ({ show, setShow }) => {
     <Modal enter={show} setEnter={setShow}>
       {({ state }) => (
         <div className={[styles.drawer, styles[`drawer--${state}`]].join(" ")}>
-          <button onClick={() => setShow(false)}>
+          <button className={styles.drawer__btn} onClick={() => setShow(false)}>
             <img src={close} alt="" />
           </button>
           <ul className={styles.menu__list}>
