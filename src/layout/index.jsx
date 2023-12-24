@@ -3,28 +3,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Container from "../components/Container"
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import arrow from "../assets/svg/arrow.svg"
 import styles from "./style.module.css"
-
-const useDebounce = (callback, delay) => {
-  const latestCallback = useRef();
-  const timer = useRef();
-
-  useEffect(() => {
-    latestCallback.current = callback;
-  }, [callback]);
-
-  return useCallback(() => {
-    if (timer.current) {
-      clearTimeout(timer.current);
-    }
-    timer.current = setTimeout(() => {
-      latestCallback.current();
-    }, delay);
-  }, [delay]);
-};
-
+import useDebounce from "../hooks/useDebounce";
 
 const Layout = () => {
   const [position, setPosition] = useState({ top: 0, left: 0 })
