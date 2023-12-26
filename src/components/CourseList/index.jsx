@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 import hyperledger from "../../assets/images/hyperledger.png"
-import Content from "../Content";
 
 const postList = [
     {
