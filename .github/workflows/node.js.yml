@@ -40,18 +40,7 @@ jobs:
         source: "./build"
         target: ${{ env.RELEASE_PATH }}
 
-    # - name: Copy config files
-    #   uses: appleboy/ssh-action@master
-    #   with:
-    #     host: ${{ secrets.REMOTE_SERVER }}
-    #     username: ${{ secrets.REMOTE_USER }}
-    #     key: ${{ secrets.REMOTE_KEY }}
-    #     script: |
-    #       echo '${{ secrets.ENV_FILE }}' > ${{ env.RELEASE_PATH }}/build/.env
-    #       echo '${{ vars.NGINX_CONFIG }}' > ${{ env.RELEASE_PATH }}/build/nginx.conf
-    #       sudo systemctl restart nginx
-
-    - name: Install dependencies
+    - name: Replace new release
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.REMOTE_SERVER }}
@@ -62,3 +51,12 @@ jobs:
           rm -rf ./www/*
           mv ./build/* ./www
           rm -rf ./build
+
+    - name: Copy config files
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_SERVER }}
+        username: ${{ secrets.REMOTE_USER }}
+        password: ${{ secrets.REMOTE_PASS }}
+        script: |
+          echo '${{ secrets.REMOTE_HTACCESS }}' > ${{ env.RELEASE_PATH }}/www/.htaccess
