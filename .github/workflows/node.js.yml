@@ -6,7 +6,7 @@ name: Node.js CI
 env:
   APP_NAME: 'node'
   COMPONENT_NAME: 'backend'
-  RELEASE_PATH: /data/sites/web/ruudjuffermansnl/
+  RELEASE_PATH: /data/sites/web/ruudjuffermansnl
 
 
 on:
