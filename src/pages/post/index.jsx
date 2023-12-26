@@ -9,7 +9,7 @@ const Post = () => {
   const [post, setPost] = useState(null)
 
   useEffect(() => {
-    const obj = posts.find(obj => obj.id == id);
+    const obj = posts.find(obj => obj.id === parseInt(id));
     setPost(obj)
   }, [id])
   if (post == null) return null
