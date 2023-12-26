@@ -38,7 +38,7 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         password: ${{ secrets.REMOTE_PASS }}
         rm: true
-        source: "./build"
+        source: "./build/*"
         target: ${{ env.RELEASE_PATH }}/TEST
 
     # - name: Copy config files
