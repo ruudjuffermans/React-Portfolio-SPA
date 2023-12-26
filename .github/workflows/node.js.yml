@@ -20,21 +20,16 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    # The second step sets up Node.js with version 16.
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
         node-version: 16
-
+    - run: npm i
+    - run: npm run build
 
     - name: Transfer files to server
       uses: appleboy/scp-action@master
@@ -43,8 +38,8 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         password: ${{ secrets.REMOTE_PASS }}
         rm: true
-        source: "."
-        target: ${{ env.RELEASE_PATH }}/src
+        source: "./build"
+        target: ${{ env.RELEASE_PATH }}/TEST
 
     # - name: Copy config files
     #   uses: appleboy/ssh-action@master
@@ -57,14 +52,16 @@ jobs:
     #       echo '${{ vars.NGINX_CONFIG }}' > ${{ env.RELEASE_PATH }}/build/nginx.conf
     #       sudo systemctl restart nginx
 
-    - name: Install dependencies
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.REMOTE_SERVER }}
-        username: ${{ secrets.REMOTE_USER }}
-        password: ${{ secrets.REMOTE_PASS }}
-        script: |
-          cd ${{ env.RELEASE_PATH }}/src
-          npm i
-          npm run build
-          mv ./build/* ../www
+    # - name: Install dependencies
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.REMOTE_SERVER }}
+    #     username: ${{ secrets.REMOTE_USER }}
+    #     password: ${{ secrets.REMOTE_PASS }}
+    #     script: |
+    #       cd ${{ env.RELEASE_PATH }}/TEMP
+    #       npm i
+    #       npm run build
+    #       mv ./build/* ../www
+    #       cd ..
+    #       rm -rf ./TEMP
