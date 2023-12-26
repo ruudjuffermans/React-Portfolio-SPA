@@ -6,7 +6,7 @@ name: Node.js CI
 env:
   APP_NAME: 'node'
   COMPONENT_NAME: 'backend'
-  RELEASE_PATH: /data/sites/web/ruudjuffermansnl/www/
+  RELEASE_PATH: /data/sites/web/ruudjuffermansnl/
 
 
 on:
@@ -26,14 +26,14 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # The second step sets up Node.js with version 16.
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm i
-    - run: npm run build
+        node-version: 16
 
 
     - name: Transfer files to server
@@ -43,5 +43,26 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         password: ${{ secrets.REMOTE_PASS }}
         rm: true
-        source: '.'
-        target: ${{ env.RELEASE_PATH }}
+        target: ${{ env.RELEASE_PATH }}/www
+
+    # - name: Copy config files
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.REMOTE_SERVER }}
+    #     username: ${{ secrets.REMOTE_USER }}
+    #     key: ${{ secrets.REMOTE_KEY }}
+    #     script: |
+    #       echo '${{ secrets.ENV_FILE }}' > ${{ env.RELEASE_PATH }}/build/.env
+    #       echo '${{ vars.NGINX_CONFIG }}' > ${{ env.RELEASE_PATH }}/build/nginx.conf
+    #       sudo systemctl restart nginx
+
+    # - name: Install dependencies
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.REMOTE_SERVER }}
+    #     username: ${{ secrets.REMOTE_USER }}
+    #     password: ${{ secrets.REMOTE_PASS }}
+    #     script: |
+    #       cd ${{ env.RELEASE_PATH }}/build
+    #       npm i
+    #       npm run build
