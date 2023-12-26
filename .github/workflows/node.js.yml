@@ -43,5 +43,5 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         password: ${{ secrets.REMOTE_PASS }}
         rm: true
-        source: '.,!./build'
+        source: '.'
         target: ${{ env.RELEASE_PATH }}
