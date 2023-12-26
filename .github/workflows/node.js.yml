@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16
-    - run: npm i
+    - run: npm ci
     - run: npm run build
 
     - name: Transfer files to server
@@ -37,9 +37,8 @@ jobs:
         host: ${{ secrets.REMOTE_SERVER }}
         username: ${{ secrets.REMOTE_USER }}
         password: ${{ secrets.REMOTE_PASS }}
-        rm: true
-        source: "./build/."
-        target: ${{ env.RELEASE_PATH }}/TEST
+        source: "./build"
+        target: ${{ env.RELEASE_PATH }}
 
     # - name: Copy config files
     #   uses: appleboy/ssh-action@master
@@ -52,16 +51,14 @@ jobs:
     #       echo '${{ vars.NGINX_CONFIG }}' > ${{ env.RELEASE_PATH }}/build/nginx.conf
     #       sudo systemctl restart nginx
 
-    # - name: Install dependencies
-    #   uses: appleboy/ssh-action@master
-    #   with:
-    #     host: ${{ secrets.REMOTE_SERVER }}
-    #     username: ${{ secrets.REMOTE_USER }}
-    #     password: ${{ secrets.REMOTE_PASS }}
-    #     script: |
-    #       cd ${{ env.RELEASE_PATH }}/TEMP
-    #       npm i
-    #       npm run build
-    #       mv ./build/* ../www
-    #       cd ..
-    #       rm -rf ./TEMP
+    - name: Install dependencies
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_SERVER }}
+        username: ${{ secrets.REMOTE_USER }}
+        password: ${{ secrets.REMOTE_PASS }}
+        script: |
+          cd ${{ env.RELEASE_PATH }}
+          rm -rf ./www/*
+          mv ./build/* ./www
+          rm -rf ./build
