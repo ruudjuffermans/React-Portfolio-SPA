@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import Content from "../../components/Content"
 import PageTitle from "../../components/PageTitle"
 import Section from "../../components/Section"
 

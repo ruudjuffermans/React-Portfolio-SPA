@@ -9,15 +9,15 @@ const Post = () => {
   const [post, setPost] = useState(null)
 
   useEffect(() => {
-    const obj = posts.find(obj => obj.id == id);
+    const obj = posts.find(obj => obj.id === id);
     setPost(obj)
-  }, [])
+  }, [id])
   if (post == null) return null
   return (
     <div>
       <Content>
         <PageTitle>{post.title}</PageTitle>
-        <img style={{}} src={post.image} />
+        <img style={{}} alt="post thumbnail" src={post.image} />
         {post.content}
       </Content>
     </div>

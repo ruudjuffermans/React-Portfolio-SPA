@@ -2,7 +2,7 @@ import kafka from "../images/kafka.png"
 import nft from "../images/nft.png"
 import priv from "../images/private.png"
 
-export default [
+const posts = [
     {
         date: "dec 23",
         title: "Unlocking Streaming Data with Apache Kafka.",
@@ -308,3 +308,5 @@ export default [
         id: 3
     },
 ];
+
+export default posts

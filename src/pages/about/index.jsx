@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Content><PageTitle>About me</PageTitle>
 
-      <img className={styles.image} src={image} />
+      <img alt="portrait ruud juffermans" className={styles.image} src={image} />
       <p>
         Hi,
       </p>

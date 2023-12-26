@@ -38,7 +38,7 @@ const AnimateState = ({
         }, 10);
       }
     }
-  }, [enter]);
+  }, [enter, enterOnMount]);
 
   useEffect(() => {
     if (state === STATE.LEAVING) {
@@ -51,7 +51,7 @@ const AnimateState = ({
         setState(STATE.ENTERED);
       }, duration);
     }
-  }, [state, enterOnMount]);
+  }, [state, enterOnMount, unmountOnLeave, duration]);
 
   if (state === STATE.UNMOUNTED) return null;
 
