@@ -14,13 +14,11 @@ const Post = () => {
   }, [id])
   if (post == null) return null
   return (
-    <div>
       <Content>
         <PageTitle>{post.title}</PageTitle>
         <img style={{}} alt="post thumbnail" src={post.image} />
         {post.content}
       </Content>
-    </div>
   )
 }
 

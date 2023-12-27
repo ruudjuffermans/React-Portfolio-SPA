@@ -307,6 +307,51 @@ const posts = [
         read: 6,
         id: 3
     },
+    {
+        date: "dec 27",
+        title: 'My Favorite Reads of 2023',
+        image: books,
+        content:
+            <>
+                <p>
+                    As the year 2023 draws to a close, it's the perfect time to look back and cherish the wonderful books that graced my reading list. This year has been a remarkable journey through a diverse array of genres and authors, each offering unique insights and unforgettable stories. Join me as I share my top picks from this year's literary adventures.</p>
+                <h3>
+
+                    1. "The 48 Laws of Power" by Robert Greene
+                </h3>
+                <p>
+                    This book isn't just a read; it's an expedition into the often unspoken rules of power dynamics. Greene's exploration of power through historical anecdotes and philosophical insights is as enlightening as it is controversial. Each law, from 'Never Outshine the Master' to 'Assume Formlessness,' is presented with a blend of historical examples and practical advice. While some may view these laws as manipulative, I found them to be a revealing lens into the mechanics of power in social and professional landscapes. It's a must-read for anyone looking to understand the underlying forces that shape our interactions. </p>
+
+                <h3>
+                    2. "Mastery" by Robert Greene
+                </h3>
+
+                <p>
+                    Continuing with Greene's compelling style, "Mastery" is a deep dive into the journey of mastering a skill or craft. The book is an amalgamation of biographical sketches of historical figures like Leonardo da Vinci and contemporary masters. Greene dissects the path to mastery, emphasizing the importance of apprenticeship, creative social networks, and the intrinsic motivation behind pursuing mastery. This book resonated with me, reminding me that true mastery is a lifelong journey of continuous learning and passion.
+                </p>
+
+                <h3>
+
+                    3. "The Molecule of More" by Daniel Z. Lieberman and Michael E. Long
+                </h3>
+                <p>
+                    "The Molecule of More" is a fascinating exploration of how a single neurotransmitter, dopamine, influences our desires, motivations, and pleasures. Lieberman and Long combine neuroscience with everyday experiences, making complex concepts accessible and engaging. This book offers a unique perspective on why we crave what we crave, and how our pursuit of 'more' impacts various aspects of our lives, from relationships to career choices. It's a thought-provoking read that left me reflecting on my own dopamine-driven pursuits. </p>
+
+
+                <h3>
+                    4. "Atomic Habits" by James Clear
+                </h3>
+                <p>
+                    James Clear's "Atomic Habits" is a game-changer in the world of self-improvement. Clear's approach to habit formation is both practical and profound, emphasizing small, incremental changes that lead to significant results over time. His 4-step model of cue, craving, response, and reward offers a simple yet powerful framework for understanding and reshaping our habits. This book is a toolbox of strategies for anyone looking to build better habits or break bad ones. It's a guide I'll be returning to often. </p>
+                <h3>
+                    Conclusion:
+                </h3>
+                <p>
+                    Each of these books has contributed uniquely to my understanding of power, mastery, desire, and habit formation. Whether you're looking for strategic insights, personal growth, or a deeper understanding of human nature, these titles offer a rich tapestry of knowledge and wisdom. As 2024 comes to a close, I'm grateful for the lessons these books have imparted and excited for what next year's reading list will bring. </p>
+            </>,
+        read: 6,
+        id: 3
+    },
 ];
 
 export default posts
