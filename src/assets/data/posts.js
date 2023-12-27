@@ -1,6 +1,7 @@
 import kafka from "../images/kafka.png"
 import nft from "../images/nft.png"
 import priv from "../images/private.png"
+import books from "../images/books.png"
 
 const posts = [
     {
@@ -304,7 +305,7 @@ const posts = [
                     While public blockchains often steal the limelight in discussions about this transformative technology, private blockchains have their place in the digital ecosystem.In situations where privacy, efficiency, and control are crucial, a private blockchain can provide a tailored solution that a public blockchain cannot.As we continue to explore and expand the applications of blockchain technology, recognizing and leveraging the strengths of private blockchains will be essential in industries like healthcare, finance, and supply chain management.
                 </p>
             </>,
-        read: 6,
+        read: 8,
         id: 3
     },
     {
@@ -349,8 +350,8 @@ const posts = [
                 <p>
                     Each of these books has contributed uniquely to my understanding of power, mastery, desire, and habit formation. Whether you're looking for strategic insights, personal growth, or a deeper understanding of human nature, these titles offer a rich tapestry of knowledge and wisdom. As 2024 comes to a close, I'm grateful for the lessons these books have imparted and excited for what next year's reading list will bring. </p>
             </>,
-        read: 6,
-        id: 3
+        read: 7,
+        id: 4
     },
 ];
 
