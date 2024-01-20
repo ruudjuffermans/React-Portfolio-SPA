@@ -358,7 +358,7 @@ const posts = [
         id: 4
     },
     {
-        date: "jan 19",
+        date: "jan 21",
         title: 'SOLID Principles applied to python Object Oriented Programming',
         image: icecube,
         content:
@@ -656,7 +656,7 @@ class API(DataSource):
                 <h2>Conclusion</h2>
                 <p>By applying the SOLID principles in your Python code, you can achieve better object-oriented design, leading to more maintainable, flexible, and extensible software. These principles promote clean and modular code, making it easier to collaborate with other developers and adapt to changing requirements.</p>
             </>,
-        read: 6,
+        read: 11,
         id: 5
     },
 ];
