@@ -656,7 +656,7 @@ class API(DataSource):
                 <h2>Conclusion</h2>
                 <p>By applying the SOLID principles in your Python code, you can achieve better object-oriented design, leading to more maintainable, flexible, and extensible software. These principles promote clean and modular code, making it easier to collaborate with other developers and adapt to changing requirements.</p>
             </>,
-        read: 11,
+        read: 9,
         id: 5
     },
 ];
