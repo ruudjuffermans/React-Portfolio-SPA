@@ -1,0 +1,11 @@
+.codebox,
+.codebox {
+  background: rgb(27, 27, 27) !important;
+  border-radius: 10px !important;
+  font-weight: 600;
+}
+
+.codebox code {
+  background: inherit !important;
+
+}
