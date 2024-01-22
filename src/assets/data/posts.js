@@ -365,7 +365,7 @@ const posts = [
             <>
                 <p>
                     In Python, when you're creating classes,
-                    principles can be used too enhance the quality of your object-oriented code.
+                    principles can be used to enhance the quality of your object-oriented code.
                     The most universally acepted principles for object-oriented programming are the SOLID principles.
                     SOLID is an acronym that groups five core principles that apply to object-oriented design. These principles are the following:
                 </p>
