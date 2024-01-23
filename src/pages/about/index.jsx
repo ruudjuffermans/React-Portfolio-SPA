@@ -12,18 +12,17 @@ const About = () => {
         Hi,
       </p>
       <p>
-        I'm Ruud Juffermans, a recent graduate with a deep interest in Kafka and blockchain technology. My academic journey centered on distributed systems, giving me a solid foundation in these cutting-edge areas. I'm now excited to apply this knowledge in the dynamic tech industry.</p>
+        I'm Ruud Juffermans, a recent graduate with a deep interest in apache kafka and blockchain technology. My academic journey taught me a lot about distributed systems, giving me a solid foundation on the subject. I'm now excited to apply this knowledge.</p>
       <p>
 
-        Beyond my professional interests, I'm an enthusiastic sports fan, particularly enjoying golf, fitness, and trail running. These activities not only keep me fit but also instill discipline and focus, qualities I find invaluable in my tech career.
+        Beyond my professional interests, I'm an enthusiastic sports fan, particularly enjoying golf, fitness, and trail running.
       </p>
       <p>
 
-        In this blog, I'll dive into Kafka's stream processing and blockchain's impact on secure transactions, sharing insights and practical applications. Occasionally, I'll also discuss how my sports experiences influence my approach to technology.
+        In this blog, I'll dive into Kafka's stream processing and blockchain's impact on secure transactions, sharing insights and practical applications.
       </p>
       <p>
-
-        Join me on this journey of exploring technology's potential and personal development. Stay tuned for updates and insights into Kafka and blockchain. Let's discover the exciting world of technology together!
+        Join me on this journey of exploring technology's potential and personal development. Stay tuned for updates!
       </p>
 
     </Content>
