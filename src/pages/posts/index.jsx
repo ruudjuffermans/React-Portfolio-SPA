@@ -1,16 +1,16 @@
 import Content from "../../components/Content"
-import CourseList from "../../components/CourseList"
+import PostList from "../../components/Postlist"
 import PageTitle from "../../components/PageTitle"
 
-const Courses = () => {
+const Blogs = () => {
   return (
-    <div><PageTitle>Courses</PageTitle>
+    <div><PageTitle>Posts</PageTitle>
       <Content>
 
-        <CourseList />
+        <PostList />
       </Content>
     </div>
   )
 }
 
-export default Courses
+export default Blogs

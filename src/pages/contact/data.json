@@ -1,0 +1,28 @@
+{
+    "introText": "If you want to contact me for whatever reason, use the contact details below.",
+    "contactDetails": [
+      {
+        "label": "Email",
+        "value": "ruudjuf@gmail.com"
+      },
+      {
+        "label": "Telephone",
+        "value": "+31 (0)6 435 950 90"
+      }
+    ],
+    "socials": [
+      {
+        "label": "Instagram",
+        "link": "https://www.instagram.com/rudy_j3/"
+      },
+      {
+        "label": "LinkedIn",
+        "link": "https://www.linkedin.com/in/r-j3/"
+      },
+      {
+        "label": "Github",
+        "link": "https://github.com/ruudjuffermans"
+      }
+    ],
+    "closingText": "I'm always open to discussions, collaborations, or just a friendly chat about technology and sports. Looking forward to hearing from you!"
+  }

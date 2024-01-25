@@ -27,18 +27,10 @@ const Home = () => {
         <Button onClick={() => handleClick("/about-me")} to={"/about-me"}>About Me</Button>
       </PageTitle>
       <Section>
-
         <h3>
           posts
         </h3>
         <Postlist />
-      </Section>
-      <Section>
-
-        <h3>
-          courses
-        </h3>
-        <CourseList />
       </Section>
     </Content>
   )
