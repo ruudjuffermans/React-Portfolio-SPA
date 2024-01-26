@@ -1,0 +1,226 @@
+{
+  "id": 5,
+    "date": "2024-01-21",
+    "title": "SOLID Principles applied to Python Object Oriented Programming",
+    "image": "icecube.png",
+    "read": 9,
+    "content": [
+      {
+        "id": 1,
+        "tag": "p",
+        "value": "In Python, when you're creating classes, principles can be used to enhance the quality of your object-oriented code. The most universally accepted principles for object-oriented programming are the SOLID principles. SOLID is an acronym that groups five core principles that apply to object-oriented design. These principles are the following:"
+      },
+      {
+        "id": 2,
+        "tag": "ol",
+        "value": [
+          {
+            "id": 1,
+            "tag": "li",
+            "value": "Single-responsibility principle"          
+          },
+          {
+            "id": 2,
+            "tag": "li",
+            "value": "Open–closed principle"          
+          },
+          {
+            "id": 3,
+            "tag": "li",
+            "value": "Liskov substitution principle"          
+          },
+          {
+            "id": 4,
+            "tag": "li",
+            "value": "Interface segregation principle"          
+          },
+          {
+            "id": 5,
+            "tag": "li",
+            "value": "Dependency inversion principle"          
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "tag": "h2",
+        "value": "Single-responsibility principle"
+      },
+      {
+        "id": 4,
+        "tag": "p",
+        "value": "The Single Responsibility Principle describes that a class should have only one reason to change."
+      },
+      {
+        "id": 5,
+        "tag": "p",
+        "value": "This means that a class and its methods should have only one responsibility. Different tasks should be separated into their own classes. The benefits of this implementation are that classes with a single responsibility are easier to understand and modify, reducing the risk of introducing bugs when you make changes. Also, when a class has a single responsibility, it becomes easier to write focused unit tests, ensuring that each part of your system functions correctly."
+      },
+      {
+        "id": 6,
+        "tag": "p",
+        "value": "In this next example, we find the class called: ReportGenerator. This class contains 2 methods called generate_report and send_email."
+      },
+      {
+        "id": 7,
+        "tag": "CodeBox",
+        "value": "class ReportGenerator:\n  def __init__(self, report_data):\n      self.report_data = report_data\n\n  def generate_report(self):\n      # Generate a report from the data\n      report = f\"Report Data: {self.report_data}\"\n      return report\n\n  def send_email(self, recipient_email):\n      # Send an email with the generated report as an attachment\n      report = self.generate_report()\n      # Code for sending email with the report"
+      },
+      {
+        "id": 8,
+        "tag": "p",
+        "value": "This principle suggests that this is a wrong implementation. A better way would be to separate the email sending into its own class."
+      },
+      {
+        "id": 9,
+        "tag": "CodeBox",
+        "value": "class ReportGenerator:\n  def __init__(self, report_data):\n      self.report_data = report_data\n\n  def generate_report(self):\n      # Generate a report from the data\n      report = f\"Report Data: {self.report_data}\"\n      return report\n\nclass EmailSender:\n  def __init__(self):\n      pass\n\n  def send_email(self, recipient_email, message):\n      # Send an email with the provided message\n      # Code for sending email"
+      },
+      {
+        "id": 10,
+        "tag": "h2",
+        "value": "Open–closed principle"
+      },
+      {
+        "id": 11,
+        "tag": "p",
+        "value": "The Open/Closed Principle suggests that software entities (classes, modules, functions, etc.) should be created in a way that is open for extension but closed for modification."
+      },
+      {
+        "id": 12,
+        "tag": "p",
+        "value": "To better understand what the open-closed principle is all about, consider the following Shape class:"
+      },
+      {
+        "id": 13,
+        "tag": "CodeBox",
+        "value": "class ShapeCalculator:\n  def calculate_area(self, shape, **kwargs):\n      if shape == \"rectangle\":\n          width = kwargs.get(\"width\", 0)\n          height = kwargs.get(\"height\", 0)\n          return width * height\n      elif shape == \"circle\":\n          radius = kwargs.get(\"radius\", 0)\n          return 3.14 * radius * radius"
+      },
+      {
+        "id": 14,
+        "tag": "p",
+        "value": "In the calculate_area function, we decide how to calculate the area based on the shape that is provided as a parameter. The Open–closed principle says that it's better to, instead of deciding what logic is used inside the class, add additions to the code in objects that derive the shared logic from a parent object, like how it's done in the next example."
+      },
+      {
+        "id": 15,
+        "tag": "CodeBox",
+        "value": "from abc import ABC, abstractmethod\n\nclass Shape(ABC):\n  @abstractmethod\n  def calculate_area(self):\n      pass\n\nclass Rectangle(Shape):\n  def __init__(self, width, height):\n      self.width = width\n      self.height = height\n\n  def calculate_area(self):\n      return self.width * self.height\n\nclass Circle(Shape):\n  def __init__(self, radius):\n      self.radius = radius\n\n  def calculate_area(self):\n      return 3.14 * self.radius * self.radius"
+      },
+      {
+        "id": 16,
+        "tag": "p",
+        "value": "Now the Shape, Rectangle, and Circle classes are created and done, no modification needed. We can, however, extend the code base by adding additional shape classes, like, for example, a triangle class."
+      },
+      {
+        "id": 17,
+        "tag": "h2",
+        "value": "Liskov substitution principle"
+      },
+      {
+        "id": 18,
+        "tag": "p",
+        "value": "The Liskov Substitution Principle states that derived classes should be able to replace their parent class without affecting the correctness of the program."
+      },
+      {
+        "id": 19,
+        "tag": "h4",
+        "value": "Wrong implementation"
+      },
+      {
+        "id": 20,
+        "tag": "CodeBox",
+        "value": "class Rectangle:\n  def __init__(self, width, height):\n      self.width = width\n      self.height = height\n\n  def set_width(self, width):\n      self.width = width\n\n  def set_height(self, height):\n      self.height = height\n\n  def area(self):\n      return self.width * self.height\n\nclass Square(Rectangle):\n  def __init__(self, side_length):\n      super().__init__(side_length, side_length)\n\n  def set_width(self, width):\n      self.width = width\n      self.height = width\n\n  def set_height(self, height):\n      self.width = height\n      self.height = height"
+      },      
+      {
+        "id": 21,
+        "tag": "p",
+        "value": "This example is wrong because we overwrite some of the logic of the parent class."
+      },
+      {
+        "id": 22,
+        "tag": "h4",
+        "value": "Right implementation"
+      },
+      {
+        "id": 23,
+        "tag": "CodeBox",
+        "value": "class Rectangle:\n  def __init__(self, width, height):\n      self.width = width\n      self.height = height\n\n  def set_width(self, width):\n      self.width = width\n\n  def set_height(self, height):\n      self.height = height\n\n  def area(self):\n      return self.width * self.height\n\nclass Square:\n  def __init__(self, side_length):\n      self.side_length = side_length\n\n  def set_side_length(self, side_length):\n      self.side_length = side_length\n\n  def area(self):\n      return self.side_length ** 2"
+      },
+      {
+        "id": 24,
+        "tag": "p",
+        "value": "This way is better because no inherited logic is overwritten. Now we could argue that we can still add a parent class to inherit from; we could call it Shape and set it up as a base class with an abstract method called area."
+      },
+      {
+        "id": 25,
+        "tag": "h2",
+        "value": "Interface segregation principle"
+      },
+      {
+        "id": 26,
+        "tag": "p",
+        "value": "The Interface Segregation Principle suggests that clients should not be forced to depend on interfaces they do not use. In other words, it encourages the creation of small, specific interfaces rather than large, monolithic ones."
+      },
+      {
+        "id": 27,
+        "tag": "CodeBox",
+        "value": "from abc import ABC, abstractmethod\n\nclass Worker(ABC):\n  @abstractmethod\n  def code(self):\n      pass\n\nclass Tester(Worker):\n  def code(self):\n      raise NotImplementedError(\"Functionality not supported\")\n\n  def test(self):\n      # Tester-specific test implementation\n      pass\n\nclass Developer(Worker):\n  def code(self):\n      # Developer-specific code implementation\n      pass\n\nclass Tester(Worker):\n  def code(self):\n      raise NotImplementedError(\"Functionality not supported\")\n\n  def test(self):\n      # Tester-specific test implementation\n      pass"
+      },
+      {
+        "id": 28,
+        "tag": "p",
+        "value": "Here we have a class called Developer and a class called Tester that both inherit from the Worker class. Since they both inherit from the Worker class, they both need to implement the methods. The Tester class does not implement the code function, so it raises an exception when it's called from this class."
+      },
+      {
+        "id": 29,
+        "tag": "p",
+        "value": "In this next example, we create 2 smaller interfaces that, when they are used, are fully implemented."
+      },
+      {
+        "id": 30,
+        "tag": "CodeBox",
+        "value": "from abc import ABC, abstractmethod\n\nclass Coder(ABC):\n  @abstractmethod\n  def code(self):\n      pass\n\nclass Tester(ABC):\n  @abstractmethod\n  def test(self):\n      pass\n\nclass Developer(Coder, Tester):\n  def code(self):\n      # Developer-specific code implementation\n      pass\n\nclass ManualTester(Tester):\n  def test(self):\n      # ManualTester-specific test implementation\n      pass"
+      },
+      {
+        "id": 31,
+        "tag": "h2",
+        "value": "Dependency inversion principle"
+      },
+      {
+        "id": 32,
+        "tag": "p",
+        "value": "The Dependency Inversion Principle states that high-level modules should not depend on low-level modules, but both should depend on abstractions. It encourages the use of interfaces or abstract classes to decouple classes and make the code more flexible and testable."
+      },
+      {
+        "id": 33,
+        "tag": "CodeBox",
+        "value": "class FrontEnd:\n  def __init__(self, data_source):\n      self.data_source = data_source\n\n  def display_data(self):\n      data = self.data_source.get_data()\n      print(\"Display data:\", data)\n\nclass DataSource(ABC):\n  @abstractmethod\n  def get_data(self):\n      pass\n\nclass Database(DataSource):\n  def get_data(self):\n      return \"Data from the database\"\n\nclass API(DataSource):\n  def get_data(self):\n      return \"Data from the API\""
+      },      
+      {
+        "id": 34,
+        "tag": "p",
+        "value": "In this example, the FrontEnd class depends on the BackEnd class and its specifically named function get_data_from_database. This tightly coupled implementation leads to scalability issues. Let's say we want to be able to read data from a REST API too; then, we also need to make changes to the FrontEnd class. To fix the issue, you can apply the dependency inversion principle and make your classes depend on abstractions rather than on very specific implementations like BackEnd."
+      },
+      {
+        "id": 35,
+        "tag": "p",
+        "value": "To fix this example, we can introduce a DataSource class that provides the interface to use in your derived classes. Like how it's done in the next example."
+      },
+      {
+        "id": 36,
+        "tag": "CodeBox",
+        "value": "from abc import ABC, abstractmethod\n\n  class FrontEnd:\n      def __init__(self, data_source):\n          self.data_source = data_source\n\n      def display_data(self):\n          data = self.data_source.get_data()\n          print(\"Display data:\", data)\n\n  class DataSource(ABC):\n      @abstractmethod\n      def get_data(self):\n          pass\n\n  class Database(DataSource):\n      def get_data(self):\n          return \"Data from the database\"\n\n  class API(DataSource):\n      def get_data(self):\n          return \"Data from the API\""
+      },
+      {
+        "id": 37,
+        "tag": "h2",
+        "value": "Conclusion"
+      },
+      {
+        "id": 38,
+        "tag": "p",
+        "value": "By applying the SOLID principles in your Python code, you can achieve better object-oriented design, leading to more maintainable, flexible, and extensible software. These principles promote clean and modular code, making it easier to collaborate with other developers and adapt to changing requirements."
+      }
+    ]
+  }
+  

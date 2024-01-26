@@ -3,14 +3,7 @@ import Modal from "../Modal";
 import { Link } from "react-router-dom";
 import close from "../../assets/svg/close.svg"
 
-const data = [
-  { name: "Home", to: "/" },
-  { name: "About me", to: "/about-me" },
-  { name: "Contact", to: "/contact" },
-  { name: "Resume", to: "/resume" },
-  { name: "Downloads", to: "/download" },
-  { name: "Courses", to: "/courses" },
-];
+import routes from "../../router/routes"
 
 const Menu = ({ show, setShow }) => {
   return (
@@ -21,17 +14,19 @@ const Menu = ({ show, setShow }) => {
             <img src={close} alt="" />
           </button>
           <ul className={styles.menu__list}>
-            {data.map((item, i) => (
-              <li key={i} className={styles.menu__item}>
-                <Link
-                  className={styles.drawer__link}
-                  onClick={() => setShow(false)}
-                  to={item.to}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
+          {routes.filter((route) => !route.isDynamic)
+            .map(({ name, route, key }) => (
+              <li key={key} className={styles.menu__item}>
+              <Link
+                className={styles.drawer__link}
+                onClick={() => setShow(false)}
+                to={route}
+              >
+                {name}
+              </Link>
+            </li>
+            )
+          )}
           </ul>
         </div>
       )}

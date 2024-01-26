@@ -10,6 +10,6 @@
   width: 40px;
 }
 
-.arrow svg {
-fill: white;
+.arrow:hover {
+opacity: 0.5;
 }

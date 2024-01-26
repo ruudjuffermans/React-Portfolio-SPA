@@ -75,7 +75,7 @@ text-overflow: ellipsis;
 
 .post__read {
   position: relative;
-  width: 60px;
+  width: 55px;
   font-size: 14px;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -85,12 +85,12 @@ text-overflow: ellipsis;
 }
 
 .post:hover .post__read {
-width: 55px;
+width: 60px;
 }
 
 .post .post__read::after {
   transition: all ease-in-out 0.2s;
-  content: url("data:image/svg+xml; utf8, <svg fill='orange' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24'><path d='M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z'/></svg>");
+  content: url("data:image/svg+xml; utf8, <svg fill='white' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24'><path d='M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z'/></svg>");
   display:inline-block;
   height:10px;
   width:10px;

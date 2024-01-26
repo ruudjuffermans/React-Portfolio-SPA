@@ -30,6 +30,7 @@
 .header__menu {
   display: none;
   margin-left: auto;
+  transition: all ease-in-out 0.2s
 }
 
 @media only screen and (max-width: 900px) {
@@ -42,6 +43,11 @@
 }
 }
 
+.header__btn:hover {
+  opacity: 0.5;
+  }
+  
+  
 
 .header__link {
   color: var(--text-grey);

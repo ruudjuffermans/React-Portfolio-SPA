@@ -1,0 +1,62 @@
+
+{
+  "about": {
+    "portrait": "me.png",
+    "paragraphs": [
+      "Hi,",
+      "I'm Ruud Juffermans, a recent graduate with a deep interest in Apache Kafka and blockchain technology. My academic journey taught me a lot about distributed systems, giving me a solid foundation on the subject. I'm now excited to apply this knowledge.",
+      "Beyond my professional interests, I'm an enthusiastic sports fan, particularly enjoying golf, fitness, and trail running.",
+      "In this blog, I'll dive into Kafka's stream processing and blockchain's impact on secure transactions, sharing insights and practical applications.",
+      "Join me on this journey of exploring technology's potential and personal development. Stay tuned for updates!"
+    ]
+    },
+    "contact": {
+      "introText": "If you want to contact me for whatever reason, use the contact details below.",
+      "contactDetails": [
+        { "label": "Email", "value": "ruudjuf@gmail.com" },
+        { "label": "Telephone", "value": "+31 (0)6 435 950 90" }
+      ],
+      "socials": [
+        { "label": "Instagram", "link": "https://www.instagram.com/rudy_j3/" },
+        { "label": "LinkedIn", "link": "https://www.linkedin.com/in/r-j3/" },
+        { "label": "Github", "link": "https://github.com/ruudjuffermans" }
+      ],
+      "closingText": "I'm always open to discussions, collaborations, or just a friendly chat about technology and sports. Looking forward to hearing from you!"
+    },
+  "home": {
+    "introText": "My Collection of Blog Posts and Courses on Blockchain, Full-Stack Development, and More..."
+  },
+    "skills": [
+      {
+        "title": "Data Pipeline",
+        "description": "I can design and build efficient data pipelines to move and transform data from source to destination.",
+        "icon": "pipe.svg"
+      },
+      {
+        "title": "Big Data Technologies",
+        "description": "I can harness the power of big data technologies like Hadoop, Spark, and Hive for large-scale data processing.",
+        "icon": "big-data.svg"
+      },
+      {
+        "title": "Database Management",
+        "description": "I can manage and optimize SQL- & NoSQL Databases for data storage and retrieval.",
+        "icon": "management.svg"
+      },
+      {
+        "title": "ETL Software",
+        "description": "I can extract, transform, and load data from various sources into a unified and structured format.",
+        "icon": "etl.svg"
+      },
+      {
+        "title": "Data Warehousing",
+        "description": "I can design and maintain data warehouses for efficient data storage and business intelligence.",
+        "icon": "warehouse.svg"
+      },
+      {
+        "title": "Data Quality Assurance",
+        "description": "I can ensure data quality and integrity through validation, cleaning, and error handling processes.",
+        "icon": "quality.svg"
+      }
+    ]
+  
+}

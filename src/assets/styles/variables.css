@@ -1,9 +1,8 @@
 :root {
-  --background: #282c35;
+  --background: #1e2024;
   --text: #e2e2e2;
-  --menu: orangered;
   --text-grey: grey;
-  --color-primary: orange;
+  --color-primary: rgb(40, 201, 255);
   --gutter: 20px;
   --maxwidth: 1200px;
 }

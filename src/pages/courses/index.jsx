@@ -6,7 +6,6 @@ const Courses = () => {
   return (
     <div><PageTitle>Courses</PageTitle>
       <Content>
-
         <CourseList />
       </Content>
     </div>
