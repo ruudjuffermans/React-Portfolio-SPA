@@ -4,6 +4,8 @@ import About from "../pages/about";
 import Posts from "../pages/posts";
 import Post from "../pages/post";
 import Skills from "../pages/skills";
+import Courses from "../pages/courses";
+import Resume from "../pages/resume";
 
 export default [
     {
@@ -35,11 +37,25 @@ export default [
       isDynamic: false,
     },
     {
+      name: "Courses",
+      key: "courses",
+      route: "/course",
+      component: <Courses />,
+      isDynamic: false,
+    },
+    {
       name: "Post",
       key: "post",
       route: "/post/:id",
       component: <Post />,
       isDynamic: true,
+    },
+    {
+      name: "Resume",
+      key: "resume",
+      route: "/resume",
+      component: <Resume />,
+      isDynamic: false,
     },
     {
       name: "Skills",

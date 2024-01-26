@@ -37,6 +37,12 @@ const Home = () => {
         </h3>
         <Postlist />
       </Section>
+      <Section>
+        <h3>
+          courses
+        </h3>
+        <CourseList />
+      </Section>
     </Content>
   )
 }
