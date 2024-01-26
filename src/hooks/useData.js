@@ -19,7 +19,7 @@ const useData = (page) => {
     }
 
     fetchData();
-  }, []);
+  }, [page]);
 
   return { loading, error, data };
 };
