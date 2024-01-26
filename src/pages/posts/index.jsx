@@ -1,5 +1,5 @@
 import Content from "../../components/Content"
-import PostList from "../../components/PostList"
+import PostList from "../../components/PostsList"
 import PageTitle from "../../components/PageTitle"
 
 const Blogs = () => {
