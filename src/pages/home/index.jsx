@@ -4,7 +4,7 @@ import PageTitle from "../../components/PageTitle"
 import Section from "../../components/Section"
 import { useNavigate } from "react-router-dom";
 import useData from "../../hooks/useData"
-import PostList from "../../components/Postlist";
+import PostList from "../../components/PostList";
 import CourseList from "../../components/CourseList";
 
 const Home = () => {
