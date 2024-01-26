@@ -6,7 +6,7 @@ import styles from "./style.module.css"
 import useData from "../../hooks/useData";
 
 const About = () => {
-  const {data, loading, error} = useData("about");
+  const {data, loading} = useData("about");
 
   // console.log(loading)
 

@@ -9,7 +9,7 @@ import CourseList from "../../components/CourseList";
 
 const Home = () => {
   const navigate = useNavigate();
-  const {data, loading, error} = useData("home");
+  const {data, loading} = useData("home");
 
   function handleClick(path) {
     navigate(path);

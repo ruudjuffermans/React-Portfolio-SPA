@@ -6,7 +6,7 @@ import useData from "../../hooks/useData";
 // import data from "./data.json";
 
 const Contact = () => {
-  const {data, loading, error} = useData("contact");
+  const {data, loading} = useData("contact");
 
   if (loading) return null
 
