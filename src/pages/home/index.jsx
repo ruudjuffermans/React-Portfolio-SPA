@@ -1,7 +1,7 @@
 import Button from "../../components/Button"
 import Content from "../../components/Content"
 import PageTitle from "../../components/PageTitle"
-import Postlist from "../../components/PostList"
+import PostList from "../../components/PostList"
 import Section from "../../components/Section"
 import { useNavigate } from "react-router-dom";
 import useData from "../../hooks/useData"
@@ -34,7 +34,7 @@ const Home = () => {
         <h3>
           posts
         </h3>
-        <Postlist />
+        <PostList />
       </Section>
       <Section>
         <h3>
