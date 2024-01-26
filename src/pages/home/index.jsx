@@ -1,10 +1,11 @@
 import Button from "../../components/Button"
 import Content from "../../components/Content"
 import PageTitle from "../../components/PageTitle"
-import PostList from "../../components/PostList"
 import Section from "../../components/Section"
 import { useNavigate } from "react-router-dom";
 import useData from "../../hooks/useData"
+import PostList from "../../components/Postlist";
+import CourseList from "../../components/CourseList";
 
 const Home = () => {
   const navigate = useNavigate();

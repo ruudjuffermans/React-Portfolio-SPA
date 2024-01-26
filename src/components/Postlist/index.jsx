@@ -3,7 +3,6 @@ import styles from "./style.module.css";
 import { useEffect, useState } from "react";
 import Button from "../Button";
 
-<<<<<<< Updated upstream
 function formatDate(dateString) {
     const options = { 
         // year: 'numeric', 
@@ -42,9 +41,6 @@ const PostList = () => {
 
       if (posts == null) return null
     
-=======
-const PostList = () => {
->>>>>>> Stashed changes
     return (
         <>
             <div className={styles.postlist}>
