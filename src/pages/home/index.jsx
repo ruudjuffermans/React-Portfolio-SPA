@@ -1,6 +1,5 @@
 import Button from "../../components/Button"
 import Content from "../../components/Content"
-import CourseList from "../../components/CourseList"
 import PageTitle from "../../components/PageTitle"
 import Postlist from "../../components/PostList"
 import Section from "../../components/Section"
