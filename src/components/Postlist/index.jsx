@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
 import { useEffect, useState } from "react";
+import Button from "../Button";
 
 function formatDate(dateString) {
     const options = { 
@@ -12,8 +13,9 @@ function formatDate(dateString) {
     return formattedDate;
   }
 
-const Postlist = () => {
+const PostList = () => {
     const [posts, setPosts] = useState(null);
+    const [show, setShow] = useState(false);
   
   
     useEffect(() => {
@@ -29,6 +31,10 @@ const Postlist = () => {
           allPosts.push(jsonData);
         });
     
+        // Sort the allPosts array by date in descending order
+        allPosts.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date);
+        });
         // Set the allPosts array in the state
         setPosts(allPosts);
       }, []);
@@ -36,17 +42,27 @@ const Postlist = () => {
       if (posts == null) return null
     
     return (
-        <div className={styles.postlist}>
-            {posts.map(({ title, date, read, id }, i) => (
-                <Link key={i} className={styles.post}
+        <>
+            <div className={styles.postlist}>
+                {posts.slice(0, show ? 99 : 3).map(({ title, date, read, id }, i) => (
+                    <Link key={i} className={styles.post}
                     to={`/post/${id}`}>
-                    <div className={styles.post__date}>{formatDate(date)}</div>
-                    <div className={styles.post__title}>{title}</div>
-                    <div className={styles.post__read}>{read} min read</div>
-                </Link>
-            ))}
-        </div>
+                        <div className={styles.post__date}>{formatDate(date)}</div>
+                        <div className={styles.post__title}>{title}</div>
+                        <div className={styles.post__read}> <span className={styles.post__min}> {read} min read</span></div>
+                    </Link>
+                ))}
+            </div>
+
+            {!show && <><div className={styles.listfade}></div>
+            <div className={styles.center__row}>
+            <Button className={styles.show__more} onClick={() => setShow(99)} >Show More</Button>
+            </div>
+            </>
+            }
+
+        </>
     )
 }
 
-export default Postlist
+export default PostList

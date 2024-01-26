@@ -3,14 +3,16 @@ import PageTitle from "../../components/PageTitle"
 import image from "../../assets/images/me.png"
 import styles from "./style.module.css"
 
-import data from "./data.json";
+import useData from "../../hooks/useData";
 
 const About = () => {
-  // const { t } = useTranslation(); // Initialize the translation hook
+  const {data, loading, error} = useData("about");
 
-  // const paragraphs = t("paragraphs", { returnObjects: true });
+  // console.log(loading)
 
-  return (
+  if (loading) return null
+
+    return (
     <Content>
       <PageTitle>About me</PageTitle>
       <img alt="portrait ruud juffermans" className={styles.image} src={image} />

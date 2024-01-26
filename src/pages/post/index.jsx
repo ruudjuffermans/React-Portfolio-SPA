@@ -29,7 +29,7 @@ const Post = () => {
 
   useEffect(() => {
     if (post != null) {
-      import(`../../assets/images/${post.image}.png`)
+      import(`../../assets/images/${post.image}`)
       .then((image) => {
         setImageSrc(image.default);
       })

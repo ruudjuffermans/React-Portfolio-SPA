@@ -3,7 +3,7 @@
     background-color: transparent;
     margin-right: 5px;
     margin-left: 5px;
-    border: 1px solid var(--text-grey);
+    border: 1px solid rgb(160, 160, 160);
     color: var(--text);
     border-radius: 3px;
     cursor: pointer;
@@ -23,6 +23,7 @@
 }
 
 .btn:hover {
-  border: 1px solid var(--text-grey);
+  opacity: 0.8;
 } 
+
 

@@ -9,7 +9,7 @@
 .drawer {
   color: white;
   fill: white;
-  background: var(--menu);
+  background: var(--color-primary);
   height: 100vh;
   width: 100%;
   max-width: calc(100% - 50px);
@@ -53,6 +53,9 @@
   text-transform: none;
   font-weight: 900;
 }
+.drawer__link:hover {
+opacity: 0.5;
+}
 
 .drawer__link::before {
   height: 3px !important;
@@ -64,3 +67,8 @@
   display: block;
   fill: var(--text);
 }
+
+.drawer__btn:hover {
+  opacity: 0.5;
+  }
+  

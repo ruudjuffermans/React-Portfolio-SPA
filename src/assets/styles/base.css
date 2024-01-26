@@ -1,5 +1,5 @@
 ::selection {
-  background-color: orange;
+  background-color: var(--color-primary);
   color: #000;
 }
 

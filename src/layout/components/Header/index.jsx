@@ -13,7 +13,7 @@ const Header = () => {
       <a className={styles.header__name} href="/">Ruud Juffermans</a>
 
       <ul className={styles.header__nav}>
-      {routes.filter((route) => !route.isDynamic) // Exclude items with dynamic: true
+      {routes.filter((route) => !route.isDynamic) 
         .map(({ name, route, key }) => (
           <li key={key}>
             <NavLink

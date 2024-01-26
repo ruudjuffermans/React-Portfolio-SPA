@@ -1,11 +1,7 @@
 .postlist {
   list-style: none;
   padding: 0;
-
-
 }
-
-
 
 .post {
   display: grid;
@@ -15,17 +11,14 @@
   border-bottom: none;
   cursor: pointer;
   border-bottom: 1px solid rgba(128, 128, 128, 0.2);
-  padding-bottom: 10px;
+  padding: 5px 0;
 }
-
-
-
 
 .post__date {
   width: 50px;
   font-size: 11px;
   text-transform: capitalize;
-  color: orange;
+  color: var(--color-primary);
   opacity: 0.8;
   font-weight: 500;
   transition: all ease-in-out 0.2s;
@@ -60,20 +53,94 @@ transition: all ease-in-out 0.2s;
 }
 
 .post:hover .post__read {
-width: 90px;
+  width: 90px;
+}
+
+.post img {
+  
 }
 
 .post .post__read::after {
   transition: all ease-in-out 0.2s;
-  content: url("data:image/svg+xml; utf8, <svg fill='orange' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24'><path d='M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z'/></svg>");
+  content: url("data:image/svg+xml; utf8, <svg fill='white' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 24 24'><path d='M8.122 24l-4.122-4 8-8-8-8 4.122-4 11.878 12z'/></svg>");
   display:inline-block;
   height:10px;
   width:10px;
   opacity: 0;
 }
 
+.post__min {
+  display: unset;
+}
+
 
 
 .post:hover .post__read::after {
 opacity: 1;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .post {
+    grid-template-columns: 50px auto 50px;
+  }
+  
+  .post__read {
+    width: 10px;
+    content: none;
+  }  
+  .post__min {
+    display: none;
+
+  }
+  .post:hover .post__read {
+    width: 20px;
+  }
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .post {
+    grid-template-columns: 50px auto 10px;
+  }
+  
+  .post__read {
+    width: 0px;
+    content: none;
+  }  
+  .post__min {
+    display: none;
+
+  }
+  .post:hover .post__read {
+    width: 10px;
+  }
+  
+}
+
+
+
+.listfade {
+  background: linear-gradient(#ffffff00 0%,var(--background) 90%);
+  height: 60px;
+  margin-top: -60px;
+  position: relative;
+}
+.center__row {
+  margin-top: -30px;
+  display: flex;
+  
+}
+.show__more {
+  z-index: 20;
+  margin: auto !important;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 900;
+  opacity: 0.8;
+}
+
+.show__more:hover {
+  border: none;
+  opacity: 1;
 }
