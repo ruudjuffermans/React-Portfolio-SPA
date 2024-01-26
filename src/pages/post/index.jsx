@@ -40,7 +40,7 @@ const Post = () => {
 
   }, [post]);
 
-  if (imageSrc == null) return null
+  if (post == null) return null
 
   return (
       <Content>
