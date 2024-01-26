@@ -7,7 +7,7 @@ import Skills from "../pages/skills";
 import Courses from "../pages/courses";
 import Resume from "../pages/resume";
 
-export default [
+const routes = [
     {
       name: "Home",
       key: "home",
@@ -66,3 +66,4 @@ export default [
     },
   ];
   
+  export default routes

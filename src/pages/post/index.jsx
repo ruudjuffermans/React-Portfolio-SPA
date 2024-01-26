@@ -18,14 +18,14 @@ const Post = () => {
 
       const matchingFiles = fileNames.filter((fileName) => {
         const jsonData = jsonFiles(fileName);
-        return jsonData.id == id;
+        return jsonData.id === id;
       });
 
       setPost(jsonFiles(matchingFiles));
     };
 
     findJsonWithIdOne();
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     if (post != null) {
@@ -45,7 +45,7 @@ const Post = () => {
   return (
       <Content>
         <PageTitle>{post.title}</PageTitle>
-        {imageSrc && <img alt="My Image" src={imageSrc} />}
+        {<img alt="My Portrait" src={imageSrc} />}
         {post.content.map(({ value, id, tag }) => {
           switch (tag) {
             case "CodeBox":
